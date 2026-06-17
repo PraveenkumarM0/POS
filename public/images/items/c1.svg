@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 400 300" width="400" height="300">
+  <defs>
+    <clipPath id="clip_c1"><rect width="400" height="300" rx="0"/></clipPath>
+    <linearGradient id="ov_c1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="60%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.55)"/>
+    </linearGradient>
+  </defs>
+  <image href="https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=400&h=300&fit=crop&auto=format" x="0" y="0" width="400" height="300" clip-path="url(#clip_c1)" preserveAspectRatio="xMidYMid slice"/>
+  <rect width="400" height="300" fill="url(#ov_c1)"/>
+</svg>

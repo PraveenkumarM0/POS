@@ -1,0 +1,256 @@
+/* ── Orders Page ── */
+.orders-root {
+  height: 100%;
+  overflow-y: auto;
+  background: var(--bg);
+  padding: 28px 32px;
+}
+
+.orders-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.orders-heading-label {
+  font-size: 14px;
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-family: 'Syne', sans-serif;
+  margin-bottom: 6px;
+}
+
+.orders-heading-title {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+}
+
+/* Filters */
+.orders-filters {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.orders-filter-label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-muted);
+  font-family: 'Syne', sans-serif;
+  letter-spacing: 0.06em;
+}
+
+.orders-date-input {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 10px 12px;
+  min-height: 44px;
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+  font-family: 'Instrument Sans', sans-serif;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.orders-date-input:focus { border-color: var(--primary-border); }
+
+.orders-filter-sep {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.orders-filter-clear {
+  padding: 10px 16px;
+  min-height: 44px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Syne', sans-serif;
+  transition: all 0.15s;
+}
+
+.orders-filter-clear:hover {
+  border-color: var(--primary-border);
+  color: var(--primary);
+}
+
+/* Summary bar */
+.orders-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.orders-summary-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+}
+
+.orders-summary-card-label {
+  font-size: 14px;
+  color: var(--text-dim);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-family: 'Syne', sans-serif;
+  margin-bottom: 4px;
+}
+
+.orders-summary-card-value {
+  font-size: 22px;
+  font-weight: 800;
+  font-family: 'Syne', sans-serif;
+}
+
+/* Order list */
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.orders-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.18s;
+}
+
+.orders-row:hover { border-color: rgba(255,255,255,0.12); }
+
+.orders-status-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.orders-status-dot-inner {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: block;
+}
+
+.orders-row-info { flex: 1; }
+
+.orders-row-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+
+.orders-row-id {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text);
+  font-family: 'Syne', sans-serif;
+}
+
+.orders-row-type {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.orders-row-meta {
+  font-size: 14px;
+  color: var(--text-dim);
+}
+
+.orders-row-amount { text-align: right; flex-shrink: 0; }
+
+.orders-row-total {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--primary);
+  font-family: 'Syne', sans-serif;
+}
+
+.orders-row-status {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 1px;
+}
+
+/* Pagination */
+.orders-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.orders-page-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 9px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text-muted);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  font-family: 'Syne', sans-serif;
+}
+
+.orders-page-btn:hover:not(:disabled) {
+  border-color: var(--primary-border);
+  color: var(--primary);
+}
+
+.orders-page-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.orders-page-btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.orders-page-info {
+  font-size: 14px;
+  color: var(--text-dim);
+  font-family: 'Syne', sans-serif;
+  padding: 0 6px;
+}
+
+.orders-no-results {
+  text-align: center;
+  padding: 40px 0;
+  color: var(--text-dim);
+  font-size: 14px;
+  font-family: 'Syne', sans-serif;
+}
